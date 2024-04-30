@@ -6,7 +6,7 @@
 /*   By: lmeneghe <lmeneghe@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:27:48 by lmeneghe          #+#    #+#             */
-/*   Updated: 2024/04/29 14:56:46 by lmeneghe         ###   ########.fr       */
+/*   Updated: 2024/04/30 10:46:25 by lmeneghe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,6 @@ int	ft_printf(const char *s, ...)
 			print_putchar(s[i], &len);
 		i++;
 	}
+	va_end(arguments);
 	return (len);
 }

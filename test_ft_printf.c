@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_printf.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmeneghe <lmeneghe@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: lmeneghe <lmeneghe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:29:09 by lmeneghe          #+#    #+#             */
-/*   Updated: 2024/04/29 14:56:33 by lmeneghe         ###   ########.fr       */
+/*   Updated: 2024/05/31 20:51:56 by lmeneghe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>
@@ -343,10 +344,22 @@ int main(void)
 	}
 	printf("\n");
 
+	// 31 - NULL string
+	printf("31 - Testing NULL string:\n");
+
+	int nbr;
+	int nbr2;
+	printf("%d\n", nbr = ft_printf(NULL));
+	printf("%d\n", nbr2 = printf(NULL));
+	if (nbr != nbr2) {
+		printf("KO: Mismatch on return value of empty string\n");
+		all_tests_passed = 0;
+	}
+	printf("\n");
+
     // Final result
     if (all_tests_passed) 
         printf("----------------\n OK - All ft_printf tests passed\n");
 	else
         printf("----------------\n KO - One or more tests with error\n");
-
 }

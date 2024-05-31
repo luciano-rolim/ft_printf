@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmeneghe <lmeneghe@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: lmeneghe <lmeneghe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:27:48 by lmeneghe          #+#    #+#             */
-/*   Updated: 2024/04/30 10:46:25 by lmeneghe         ###   ########.fr       */
+/*   Updated: 2024/05/31 20:50:41 by lmeneghe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ int	ft_printf(const char *s, ...)
 	int		i;
 	int		len;
 
+	if (!s)
+		return (-1);
 	i = 0;
 	len = 0;
 	va_start(arguments, s);
